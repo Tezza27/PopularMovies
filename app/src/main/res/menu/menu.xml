@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+
+    <item
+        android:id="@+id/menu_option_popular"
+        android:title="@string/menu_option_popular"
+        android:orderInCategory="1"
+        app:showAsAction="never"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <item
+        android:id="@+id/menu_option_rating"
+        android:title="@string/menu_option_rating"
+        android:orderInCategory="2"
+        app:showAsAction="never"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+</menu>

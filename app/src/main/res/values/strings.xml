@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Popular Movies</string>
+
+    <!-- Strings for detail view labels -->
+    <string name="label_title">Original Title:</string>
+    <string name="label_date">Release Date:</string>
+    <string name="label_rating">User Rating:</string>
+    <string name="label_plot">Plot Overview:</string>
+
+    <!-- Strings for sort menu on activity_main -->
+    <string name="menu_title">Sort</string>
+    <string name="menu_option_popular">Sort: Most Popular</string>
+    <string name="menu_option_rating">Sort: User Rating</string>
+</resources>
