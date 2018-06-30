@@ -1,68 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAccent"
     android:orientation="vertical"
-    android:background="@color/colorAccent">
+    android:padding="8dp"
+    tools:ignore="Overdraw">
 
     <TextView
         android:id="@+id/text_title"
         style="@style/styleTitle"
         tools:text="Original Title" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <ImageView
-            android:id="@+id/image_poster"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="?android:attr/actionModeCutDrawable"
-            android:layout_weight="1"
-            android:layout_gravity="center"
-            android:layout_margin="8dp"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="1"
-            android:layout_gravity="center_vertical">
-
-
-            <TextView
-                android:id="@+id/label_date"
-                style="@style/styleLabel"
-                android:text="@string/label_date" />
-
-            <TextView
-                android:id="@+id/text_date"
-                style="@style/styleText"
-                tools:text="Release Date" />
-            <TextView
-                android:id="@+id/label_rating"
-                style="@style/styleLabel"
-                android:text="@string/label_rating" />
-
-            <TextView
-                android:id="@+id/text_rating"
-                style="@style/styleText"
-                tools:text="User Rating" />
-        </LinearLayout>
-    </LinearLayout>
-    <TextView
-        android:id="@+id/label_plot"
-        style="@style/styleLabel"
-        android:text="@string/label_plot" />
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/text_plot"
-            style="@style/styleText"
-            tools:text="Plot Overview" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/image_poster"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/poster_image"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="?android:attr/actionModeCutDrawable" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/label_date"
+                        style="@style/styleLabel"
+                        android:text="@string/label_date" />
+
+                    <TextView
+                        android:id="@+id/text_date"
+                        style="@style/styleText"
+                        tools:text="Release Date" />
+
+                    <TextView
+                        android:id="@+id/label_rating"
+                        style="@style/styleLabel"
+                        android:text="@string/label_rating" />
+
+                    <TextView
+                        android:id="@+id/text_rating"
+                        style="@style/styleText"
+                        tools:text="User Rating" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/label_plot"
+                style="@style/styleLabel"
+                android:text="@string/label_plot" />
+
+            <TextView
+                android:id="@+id/text_plot"
+                style="@style/styleText"
+                tools:text="Plot Overview" />
+
+            <TextView
+                android:id="@+id/label_trailers"
+                style="@style/styleLabel"
+                android:text="@string/label_trailers" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/trailer_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/label_reviews"
+                style="@style/styleLabel"
+                android:text="@string/label_reviews" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/review_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+            </FrameLayout>
+
+        </LinearLayout>
+
     </ScrollView>
 </LinearLayout>
